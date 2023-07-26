@@ -7,6 +7,11 @@ public class Person
     
 }
 
+public class APIGroceryResponse
+{
+    public List<GroceryItem>? GroceryItems { get; set; }
+}
+
 public class GroceryItemDetails
 {
     public long? EAN { get; set; }
@@ -20,4 +25,6 @@ public class GroceryItem
     public string? Name { get; set; }
     public GroceryItemDetails? Details { get; set; }
 }
+
+
 
