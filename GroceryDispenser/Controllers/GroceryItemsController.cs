@@ -23,7 +23,7 @@ namespace GroceryDispenser.Controllers
             var apiGroceryResponse = ReadGroceryItemsFromJson();
             if (apiGroceryResponse == null || apiGroceryResponse.GroceryItems == null) return NotFound();
     
-            var item = apiGroceryResponse.GroceryItems.FirstOrDefault(i => String.Equals(i.Name, itemName, StringComparison.CurrentCultureIgnoreCase));
+            GroceryItem? item = apiGroceryResponse.GroceryItems.FirstOrDefault(i => String.Equals(i.Name, itemName, StringComparison.CurrentCultureIgnoreCase));
             if (item == null) return NotFound();
     
             return item;
